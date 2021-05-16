@@ -166,8 +166,10 @@ public class User implements Comparable<User> {
 					System.out.println("input must be numeric!");
 				}
 			}while(choice != 0 && (choice < 0 || choice > usersize));
-			users.remove(choice-1);
-			System.out.println("Delete Succesful!");	
+			if(choice > 0) {
+				users.remove(choice-1);
+				System.out.println("Delete Succesful!");	
+			}
 		}
 		return users;
 	}
